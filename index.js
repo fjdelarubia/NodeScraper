@@ -14,13 +14,13 @@ var jq = new jQueryScraper({
 });
 
 rg.scrap("https://jrubia.com").then((data) => {
-    console.log("Data from regex: ", data);
+    console.log("Data from regex: ", JSON.stringify(data));
 }).catch((err) => {
     console.log(err);
 })
 
 jq.scrap("https://jrubia.com").then((data) => {
-    console.log("Data from jquery: ", data);
+    console.log("Data from jquery: ", JSON.stringify(data));
 }).catch((err) => {
     console.log(err);
 })

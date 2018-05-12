@@ -2,7 +2,9 @@ const baseScrapper = require('./scraper');
 
 const regex = /class="entry-title">[.\s]*<a href="([^"]*)".*>([^<]*)<\/a>/ig
 
-baseScrapper.prototype._scrap = function (content) {
+class regexScraper extends baseScrapper {}
+
+regexScraper.prototype._scrap = function (content) {
     console.log("regex");
     var entries = [];
 
@@ -20,4 +22,4 @@ baseScrapper.prototype._scrap = function (content) {
     return entries;
 }
 
-module.exports = baseScrapper;
+module.exports = regexScraper;

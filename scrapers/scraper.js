@@ -20,8 +20,6 @@ Scraper.prototype.scrap = function (url, callback) {
             callback(err, this._scrap(body));
         })
     }
-
-
 }
 
 Scraper.prototype._get = function (url, callback) {
